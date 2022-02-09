@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import traceback
 import os
+import dotenv
 
 class Bot(commands.Bot):
     def __init__(self):
@@ -29,4 +30,5 @@ async def file(ctx, file : discord.Attachment):
     file = await file.to_file(use_cached=False)
     await ctx.send(f"got your file {ctx.author}", file = file)
 
+dotenv.load_dotenv()
 bot.run(os.environ["TOKEN"])
