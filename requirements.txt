@@ -1,2 +1,1 @@
 git+https://github.com/Chiggy-Playz/enhanced-discord.py@attachment_type
-flask
